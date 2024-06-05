@@ -1,0 +1,83 @@
+section 4 
+
+lesson 19 -> 
+ 
+the data need to set in .env file this is file save the data will change from development mode to production mode -> 
+1- port number -> this is maybe change in production mode 
+
+to acess port -> from env file need
+1- to install dotenv package
+2- used dotenv.config({path:"config.env"})
+3- import from process -> process.env.portname 
+
+-------------------------------------------
+
+lesson 20 -> 
+
+http logger 
+
+this is middleware used to logs information about incoming http request and http response 
+
+to make logger need module called -> morgan
+
+what is middleware ? -> mehtod between request and respose can make in it somthings and return response about those things
+
+so morgan is middleware & it's usefull for development mode 
+
+-------------------------------------------
+
+lesson 21 -> 
+
+mongodb atlas 
+
+1- can access your machine ip and this is only will worked with this database 
+2- can set access from anywhere and will make any device access it 
+
+cluster is can called it big container have your databases
+
+-------------------------------------------
+
+lesson 23 -> 
+
+some infromation about mongodb
+
+you have an collection on databases this similarly table on sql databases
+
+collection -> table 
+
+document in collection in mongo -> row in sql
+
+field in document in mongo -> column
+
+-------------------------------------------
+
+lesson 25 -> 
+
+project folders structure 
+
+- we used folders structure to make important concpet -> separation of concerns 
+- fouces the instractor worked with service folder we worked with controller 
+
+
+-------------------------------------------
+
+lesson 26 -> 
+
+express middleware explanation
+
+// anything in express is middleware
+
+// in your request response cycle you fire middlewares and every middleware execute for move to another one 
+// so you have two things (middleware stack , request response cycle)
+
+// ----------------------------------------------------------
+
+// summary section 4 -> 
+
+// we create those -> 
+1- creating server using express and using nodemon to watch changes
+2- Environment variables and stop track files in version controle (git) using gitignore
+3- logging requests using morgan 
+4- overview about mongodb, installing and connect to our app and mongo compass
+5- make our first operation in our mongodb
+6- project folders structure
