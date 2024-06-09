@@ -81,3 +81,56 @@ express middleware explanation
 4- overview about mongodb, installing and connect to our app and mongo compass
 5- make our first operation in our mongodb
 6- project folders structure
+
+// ----------------------------------------------------------
+
+// lesson 28 -> 
+category schema and models -> 
+
+this is talk about schema for category models and (the types and constrains for every schema filed will get it from buisniess analysis)
+ACL -> access controle layer
+slug -> this is used to replace any whitespace with (dash -) ex: category name (a and b) url will be (shopping.com/a-and-b)
+
+timestamps -> this is used to create in database two fileds (created at and updated at)
+
+// lesson 30 -> 
+
+// using async await syntex 
+
+- to handling async errors need to download and used package -> express-async-handler
+
+// lesson 32 ->
+
+// categories pagination
+
+- in production mode or any case data will be big so need to send this data but not only in one time -> this is pagination
+
+- every page have an some of data 
+
+- steps 
+
+1- need to set number of page -> page = 1
+2- need to set of limit for the data will return from database -> limit = 5
+3- need to set the length will skip it  -> skip = (page - 1) * limit 
+
+- summary section 5 -> 
+
+1- we create (CRUD operation) -> 
+    1- create category
+    2- read category
+    3- update category
+    4- delete category
+
+2- we make an pagination -> divide the data into pages 
+
+3- create my requests on postman and orgnaized all of those 
+
+
+----------------------------------------------------------------------------
+problems we fouces it on this project =>
+p for problem , s for solve
+1 p - the databse created with name (test) this is created because we don't entered the datbase name 
+1 s - write after .net/ datbase name -> .net/datbase_name 
+----
+2 p - when need to get user by id fouce on the id length because this is maybe will make bug in app
+2 s - used mongoose.validate

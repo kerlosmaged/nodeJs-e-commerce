@@ -10,8 +10,7 @@ const mongoConnection = require('./config/database_config');
 const categoryRoutes = require('./routes/category_route')
 
 // database connection
-mongoConnection()
-
+mongoConnection
 
 // middleware 
 app.use(express.json())
@@ -21,10 +20,9 @@ if (process.env.NODE_ENV === "development") {
     app.use(morgan('dev'))
     console.log("we used morgan dev and on development")
 }
-
 // using routes 
 
-app.use('/api/v1/category',categoryRoutes)
+app.use('/api/v1/category', categoryRoutes)
 
 const port = process.env.PORT || 3000
 

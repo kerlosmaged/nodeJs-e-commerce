@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
-let dtabaseConnection = () => {
-    mongoose.connect(process.env.MONGO_URL).then((conn) => {
-        console.log(`your are connected to database on ${conn.connection.host}`)
-    }).catch((err) => {
-        console.log(`you have an error on connection to database ${err}`)
-    })
+let dtabaseConnection = async () => {
+    try {
+        mongoose.set("strictQuery", true)
+        const connect = await mongoose.connect(process.env.MONGO_URL)
+        console.log(`DataBase connect on ${connect.connection.host} `)
+    } catch (error) {
+        console.log(`DataBase Have an Error and this is error message -> ${error}`)
+    }
 }
 
-module.exports = dtabaseConnection
+module.exports = dtabaseConnection()
