@@ -112,6 +112,7 @@ timestamps -> this is used to create in database two fileds (created at and upda
 1- need to set number of page -> page = 1
 2- need to set of limit for the data will return from database -> limit = 5
 3- need to set the length will skip it  -> skip = (page - 1) * limit 
+ ---------------------------------------------------------------------------------
 
 - summary section 5 -> 
 
@@ -124,9 +125,58 @@ timestamps -> this is used to create in database two fileds (created at and upda
 2- we make an pagination -> divide the data into pages 
 
 3- create my requests on postman and orgnaized all of those 
+ ------------------------------------------------------------------------
 
+section 6 
 
-----------------------------------------------------------------------------
+lesson 39 -> 
+
+create error -> used Error constractor and send the message inside it 
+
+lesson 44 -> 
+
+Handle Errors -> global error we create it in older lessons solve any error on (express only) 
+- so if you need to create an handler for rejected promises or any Error will happend on anything else 
+
+lesson 45 -> 
+
+validation layer benifites -> 
+
+- the pipline Error run without validation layer 
+1- make request
+2- go to route
+3- go to controllers 
+4- go to models for database
+5- databse return the error 
+
+- the pipline Error run using validation layer 
+1- make request
+2- go to route 
+3- go to validation 
+4- if the validation true will go to controllers && but if validation flase or not valid return error
+5- go to model or database
+
+- will apply this validation middleware using -> Express validator 
+
+lesson 46 -> 
+
+implement validation layer -> 
+- this is pipline for create validation layer or validation schema
+
+1- rules -> import what you need to create validate about it -> data send on body, data send on params ,....
+2- create middleware -> create middleware for validate the input if return false need to return response else will go to the next in this case will be controller
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+section 6 summary -> 
+
+we worked with error handler in any type ->
+1- express error handler used -> global middleware
+2- error outside express used -> unhnadled rejections
+3- validation layer benefits used -> express-validator
+4- handled in development and in production env used -> development ("start:dev": "nodemon .") , production ("start:prod": "set NODE_ENV=production && node app.js")
+5- handled unfound route
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 problems we fouces it on this project =>
 p for problem , s for solve
 1 p - the databse created with name (test) this is created because we don't entered the datbase name 
@@ -134,3 +184,12 @@ p for problem , s for solve
 ----
 2 p - when need to get user by id fouce on the id length because this is maybe will make bug in app
 2 s - used mongoose.validate
+----
+3 p - in section error handler we fouces a problem in (statusCode) we create the parameter in constractor (parenthers) have same name with the constractor (variable) 
+3 s - change the variable name or constractor parameter name  
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Global Note
+
+1- when you worked on any project fouces on create the main function and after this fouces on create refactoring for this code 
